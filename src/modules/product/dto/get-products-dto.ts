@@ -1,3 +1,4 @@
+import { Transform } from 'class-transformer';
 import { IsEnum, IsNumber, IsOptional, Max, Min } from 'class-validator';
 
 export enum ProductsSortBy {
@@ -7,6 +8,7 @@ export enum ProductsSortBy {
 export class GetProductsDto {
   @IsOptional()
   @IsNumber()
+  @Transform(({ value }) => Number(value))
   @Min(1)
   @Max(100)
   limit?: number;

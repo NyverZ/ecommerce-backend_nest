@@ -13,7 +13,6 @@ import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
 import { GetProductByIdDto } from './dto/get-product-by-id-dto';
 import { AllowAnonymous } from '@thallesp/nestjs-better-auth';
-import { get } from 'http';
 import { GetProductsDto } from './dto/get-products-dto';
 
 @Controller('products')
